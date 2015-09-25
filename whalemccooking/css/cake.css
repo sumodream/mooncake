@@ -1,0 +1,1039 @@
+@-webkit-keyframes rotation
+{
+    10%
+    {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    50%,
+    60%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    90%
+    {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    100%
+    {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+}
+@keyframes rotation
+{
+    10%
+    {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    50%,
+    60%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    90%
+    {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    100%
+    {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+}
+#orientLayer
+{
+    display: none;
+}
+@media screen and (min-aspect-ratio: 13/8)
+{
+    #orientLayer
+    {
+        display: block;
+    }
+}
+.mod-orient-layer
+{
+    position: fixed;
+    z-index: 9997;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+.mod-orient-layer__content
+{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    margin-top: -75px;
+    text-align: center;
+}
+.mod-orient-layer__icon-orient
+{
+    display: inline-block;
+    width: 67px;
+    height: 109px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-animation: rotation infinite 1.5s ease-in-out;
+            animation: rotation infinite 1.5s ease-in-out;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAADaCAMAAABU68ovAAAAXVBMVEUAAAD29vb////x8fH////////x8fH5+fn29vby8vL////5+fn39/f6+vr////x8fH////////+/v7////09PT////x8fH39/f////////////////////x8fH///+WLTLGAAAAHXRSTlMAIpML+gb4ZhHWn1c2gvHBvq1uKJcC6k8b187lQ9yhhboAAAQYSURBVHja7d3blpowFIDhTUIAOchZDkre/zE7ycySrbUUpsRN2/1fzO18KzEqxEVgTiZNfgmmtxRc8iaR8HNe8x4BtjQePKayYCIoyBSgvNNE1AkNSHqZyLqk97EgUCCHBzZ5mkg7ScvIJuIyOyXBRFxgpqWZyGsAZLB1KjsJi8nutHU4JCRbFRH8tmirI9k8Jx2sqNs8K/m0LQkrktO2crgcgXGB4AiTEsB0hJfo9MGgX7CGcYiYwQxmMOOvZwRhBG8tCoMXjBDeXvWCEcHbi14wgCBmMIMZzGAGM5jxETNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxY6E2rUQxnH2tz9cirlJFwFBJedaPnUv0M7++egPDE8iAJcIDmxwH5wwv9vUviw2kLbVO3TJU5uul/EyB0FoLp4x60PdGUd3qPurrWyjGGTc05u+1dcgI7/+tCCPARWGhH7o5Y7RCf+bH9ctXLp6v2BVDxfqz0oPXeSVaNtINo/1SXDv4dck8IIkbhtC2ol+iouEonTBCbYvVMnXOjxww6s/RFrBUpXHh/gw1rHj5d/qhYn9Gpk2FWh6xRBRX5Oj3Znh2Sq49/L6+y8pB26q9GbE2dbA2mVbx6I+7MfBglLCttm73ZQi7AD3iL4HqjFYJHSPRppqaUaJ3ATpGa+ckpGak2hRRMyqjGMkvl+xyFeSMwjAqcsZgGDdyhl0oNTnDN4yenJGZFGxNChP5/Y3efh6SM2rDOJMzboYxkDMqwyjIGcIw6F+io2FU1IxIm1JqRmgXSkvNKNCXeTpGrU0JNSO2c6LIGPgCS8AuDHz9ta0SXWDtxoDRH+MqlbC2Dt2G2JFRadtQZt2qq/orGowdGb2euxYiqWEpVWhTBnszoNAPdStuQwxqf0aocdWKW4Z+DfszIh8pxJqbuCE4YAC+4bm0evtipjpgJHeFnyyt1Ku2xa0bhjxr27p75rECNwyI9ZwvXkHq+7aTaMEV44YYy/spfgjgjNHaWW+GeUhGEX7tLlVinIFDDSgnOwhi1V6bU0b6tVS9eAERe863g4dRrtiHdc6o+nn5vtyVVgR79Cqt4uL6gfHPQyGqtP2vf7HADGbcYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JjhtOM+J/AgT008yDMkN/dPP9hzS8zAMQN3OEYeekp5YU7KOKXwVXqiY+QS7smcinGKABWdiBgpPJTSMHJ4KidhhPBUSMLw4CmPhKHgKUXCkHsygum71ftNSgCX6bsl8FQyfbcL5EdYsDk0R3j7aiA5wpt5AjKg/2gLJEBD/0Hf2OOf/vRrj6z/7GtP4B3nMKyjHA12kIPSjnJs3FEO0TvKkYJHOWCR+rjJH0Vn6fI5PjNbAAAAAElFTkSuQmCC');
+    -webkit-background-size: 67px;
+            background-size: 67px;
+}
+.mod-orient-layer__desc
+{
+    font-size: 15px;
+    margin-top: 20px;
+    color: #fff;
+}
+.pt-page-scaleUpIcon
+{
+    -webkit-animation: scaleUpIcon 1.0s ease both;
+            animation: scaleUpIcon 1.0s ease both;
+}
+@-webkit-keyframes scaleUpIcon
+{
+    from
+    {
+        -webkit-transform: scale(.2);
+        opacity: 0;
+    }
+}
+@keyframes scaleUpIcon
+{
+    from
+    {
+        -webkit-transform: scale(.2);
+                transform: scale(.2);
+        opacity: 0;
+    }
+}
+
+.zoom-page
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 810px;
+    height: 1316px;
+    -webkit-transform-origin: 0 0;
+}
+*
+{
+    outline: none;
+}
+div
+{
+    border: none;
+}
+.hold-hide
+{
+    display: none !important;
+}
+@-webkit-keyframes hands
+{
+    0%,
+    20%
+    {
+        -webkit-transform: scale(1.25);
+        opacity: 1;
+    }
+    100%
+    {
+        -webkit-transform: scale(1);
+        opacity: 0;
+    }
+}
+#percentWrap
+{
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    margin-top: 48px;
+    margin-left: -20px;
+    text-align: center;
+}
+*
+{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+}
+#loading
+{
+    font-family: '黑体';
+    font-size: 20px;
+    color: #4c78a7;
+    background-color: #f7f5ea;
+}
+div .loadingbox
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 128px;
+    height: 128px;
+    margin-top: -94px;
+    margin-left: -64px;
+}
+
+.imgcomm
+{
+    position: absolute;
+}
+/*  开始页面  */
+.img1-1
+{
+    bottom: 487px;
+    left: -11px;
+    width: 810px;
+    height: 208px;
+    background: transparent url('../img/cont1.png') 0 -7px no-repeat;
+    background-size: 560px;
+}
+.img1-2
+{
+    bottom: 321px;
+    left: -11px;
+    width: 810px;
+    height: 64px;
+    background: transparent url('../img/cont1.png') 0 -199px no-repeat;
+    background-size: 560px;
+}
+.img1-3
+{
+    bottom: 261px;
+    left: -11px;
+    width: 810px;
+    height: 49px;
+    background: transparent url('../img/cont1.png') 0 -267px no-repeat;
+    background-size: 560px;
+}
+.img1-4
+{
+    bottom: 74px;
+    left: -11px;
+    width: 810px;
+    height: 143px;
+    background: transparent url('../img/cont1.png') 0 -318px no-repeat;
+    background-size: 560px;
+}
+.img1-5
+{
+    bottom: 0;
+    left: -11px;
+    width: 810px;
+    height: 84px;
+    background: transparent url('../img/cont1.png') 0 -437px no-repeat;
+    background-size: 560px;
+}
+/*  两条材料单  */
+.img3-1
+{
+    bottom: 279px;
+    left: 53px;
+    width: 36px;
+    height: 443px;
+    background: transparent url('../img/cont1.png') -475px -2034px no-repeat;
+    background-size: 540px;
+}
+.img3-46
+{
+    bottom: 279px;
+    left: 451px;
+    width: 36px;
+    height: 443px;
+    background: transparent url('../img/cont1.png') 0 -2475px no-repeat;
+    background-size: 540px;
+}
+/* 加祝福材料  */
+.img3-2
+{
+    bottom: 655px;
+    left: 84px;
+    width: 106px;
+    height: 89px;
+    background: transparent url('../img/cont1.png') 0 -736px no-repeat;
+    background-size: 450px;
+}
+.img3-3
+{
+    bottom: 640px;
+    left: 95px;
+    width: 101px;
+    height: 94px;
+    background: transparent url('../img/cont1.png') -120px -749px no-repeat;
+    background-size: 450px;
+}
+.img3-4
+{
+    bottom: 550px;
+    left: 98px;
+    width: 101px;
+    height: 94px;
+    background: transparent url('../img/cont1.png') -235px -737px no-repeat;
+    background-size: 450px;
+}
+.img3-5
+{
+    bottom: 556px;
+    left: 91px;
+    width: 87px;
+    height: 95px;
+    background: transparent url('../img/cont1.png') -335px -737px no-repeat;
+    background-size: 450px;
+}
+.img3-6
+{
+    bottom: 460px;
+    left: 82px;
+    width: 90px;
+    height: 63px;
+    background: transparent url('../img/cont1.png') 0 -863px no-repeat;
+    background-size: 450px;
+}
+.img3-8
+{
+    bottom: 450px;
+    left: 82px;
+    width: 99px;
+    height: 87px;
+    background: transparent url('../img/cont1.png') -116px -856px no-repeat;
+    background-size: 450px;
+}
+.img3-9
+{
+    bottom: 367px;
+    left: 89px;
+    width: 90px;
+    height: 77px;
+    background: transparent url('../img/cont1.png') -232px -864px no-repeat;
+    background-size: 450px;
+}
+.img3-10
+{
+    bottom: 361px;
+    left: 85px;
+    width: 99px;
+    height: 87px;
+    background: transparent url('../img/cont1.png') -12px -973px no-repeat;
+    background-size: 450px;
+}
+.img3-11
+{
+    bottom: 279px;
+    left: 88px;
+    width: 90px;
+    height: 77px;
+    background: transparent url('../img/cont1.png') -127px -973px no-repeat;
+    background-size: 450px;
+}
+.img3-12
+{
+    bottom: 265px;
+    left: 91px;
+    width: 99px;
+    height: 87px;
+    background: transparent url('../img/cont1.png') -229px -973px no-repeat;
+    background-size: 450px;
+}
+/* 减黑暗材料 */
+.img3-13
+{
+    bottom: 648px;
+    left: 364px;
+    width: 82px;
+    height: 82px;
+    background: transparent url('../img/cont1.png') -322px -968px no-repeat;
+    background-size: 450px;
+}
+.img3-14
+{
+    bottom: 642px;
+    left: 359px;
+    width: 99px;
+    height: 87px;
+    background: transparent url('../img/cont1.png') 0 -1080px no-repeat;
+    background-size: 450px;
+}
+.img3-15
+{
+    bottom: 552px;
+    left: 369px;
+    width: 75px;
+    height: 77px;
+    background: transparent url('../img/cont1.png') -104px -1080px no-repeat;
+    background-size: 450px;
+}
+.img3-16
+{
+    bottom: 550px;
+    left: 370px;
+    width: 99px;
+    height: 87px;
+    background: transparent url('../img/cont1.png') -201px -1082px no-repeat;
+    background-size: 450px;
+}
+.img3-17
+{
+    bottom: 463px;
+    left: 356px;
+    width: 90px;
+    height: 77px;
+    background: transparent url('../img/cont1.png') -287px -1088px no-repeat;
+    background-size: 450px;
+}
+.img3-18
+{
+    bottom: 457px;
+    left: 362px;
+    width: 99px;
+    height: 87px;
+    background: transparent url('../img/cont1.png') -9px -1189px no-repeat;
+    background-size: 450px;
+}
+.img3-19
+{
+    bottom: 363px;
+    left: 359px;
+    width: 83px;
+    height: 77px;
+    background: transparent url('../img/cont1.png') -105px -1189px no-repeat;
+    background-size: 450px;
+}
+.img3-20
+{
+    bottom: 358px;
+    left: 356px;
+    width: 99px;
+    height: 87px;
+    background: transparent url('../img/cont1.png') -207px -1180px no-repeat;
+    background-size: 450px;
+}
+.img3-21
+{
+    bottom: 286px;
+    left: 363px;
+    width: 90px;
+    height: 82px;
+    background: transparent url('../img/cont1.png') -314px -1180px no-repeat;
+    background-size: 450px;
+}
+.img3-22
+{
+    bottom: 280px;
+    left: 349px;
+    width: 99px;
+    height: 87px;
+    background: transparent url('../img/cont1.png') 12px -1289px no-repeat;
+    background-size: 450px;
+}
+/* 材料下面图标  */
+.img3-23
+{
+    bottom: 128px;
+    left: 32px;
+    width: 154px;
+    height: 152px;
+    background: transparent url('../img/cont1.png') 1px -348px no-repeat;
+    background-size: 300px;
+}
+.img3-24
+{
+    bottom: 128px;
+    left: 355px;
+    width: 154px;
+    height: 152px;
+    background: transparent url('../img/cont1.png') -148px -348px no-repeat;
+    background-size: 300px;
+}
+.img3-25
+{
+    bottom: 77px;
+    left: 4px;
+    width: 249px;
+    height: 79px;
+    background: transparent url('../img/cont1.png') -7px -1380px no-repeat;
+    background-size: 450px;
+}
+.img3-26
+{
+    bottom: 80px;
+    left: 297px;
+    width: 239px;
+    height: 79px;
+    background: transparent url('../img/cont1.png') -9px -1514px no-repeat;
+    background-size: 450px;
+}
+.img3-27
+{
+    bottom: 91px;
+    left: 245px;
+    width: 61px;
+    height: 49px;
+    background: transparent url('../img/cont1.png') -234px -1296px no-repeat;
+    background-size: 380px;
+}
+/* 开始制作 */
+.img3-28
+{
+    bottom: 21px;
+    left: 188px;
+    width: 239px;
+    height: 65px;
+    background: transparent url('../img/cont1.png') -5px -1437px no-repeat;
+    background-size: 400px;
+}
+/* 黑暗值 */
+.img3-29
+{
+    bottom: 501px;
+    left: 217px;
+    width: 110px;
+    height: 63px;
+    background: transparent url('../img/cont1.png') -33px -2058px no-repeat;
+    background-size: 450px;
+}
+.img3-30
+{
+    bottom: 457px;
+    left: 233px;
+    width: 75px;
+    height: 39px;
+    background: transparent url('../img/cont1.png') -141px -2076px no-repeat;
+    background-size: 450px;
+}
+.img3-31
+{
+    bottom: 457px;
+    left: 233px;
+    width: 75px;
+    height: 39px;
+    background: transparent url('../img/cont1.png') -215px -2076px no-repeat;
+    background-size: 450px;
+}
+.img3-32
+{
+    bottom: 457px;
+    left: 233px;
+    width: 75px;
+    height: 39px;
+    background: transparent url('../img/cont1.png') -287px -2076px no-repeat;
+    background-size: 450px;
+}
+.img3-33
+{
+    bottom: 457px;
+    left: 233px;
+    width: 75px;
+    height: 39px;
+    background: transparent url('../img/cont1.png') -360px -2076px no-repeat;
+    background-size: 450px;
+}
+.img3-34
+{
+    bottom: 457px;
+    left: 233px;
+    width: 75px;
+    height: 39px;
+    background: transparent url('../img/cont1.png') 0 -2446px no-repeat;
+    background-size: 450px;
+}
+/* 祝福值 */
+.img3-35
+{
+    bottom: 380px;
+    left: 217px;
+    width: 110px;
+    height: 52px;
+    background: transparent url('../img/cont1.png') -76px -2440px no-repeat;
+    background-size: 450px;
+}
+.img3-36
+{
+    bottom: 325px;
+    left: 233px;
+    width: 75px;
+    height: 39px;
+    background: transparent url('../img/cont1.png') -187px -2445px no-repeat;
+    background-size: 450px;
+}
+.img3-37
+{
+    bottom: 325px;
+    left: 233px;
+    width: 75px;
+    height: 39px;
+    background: transparent url('../img/cont1.png') -261px -2445px no-repeat;
+    background-size: 450px;
+}
+.img3-38
+{
+    bottom: 325px;
+    left: 233px;
+    width: 75px;
+    height: 39px;
+    background: transparent url('../img/cont1.png') -334px -2445px no-repeat;
+    background-size: 450px;
+}
+.img3-39
+{
+    bottom: 325px;
+    left: 233px;
+    width: 75px;
+    height: 39px;
+    background: transparent url('../img/cont1.png') 0 -2503px no-repeat;
+    background-size: 450px;
+}
+.img3-40
+{
+    bottom: 325px;
+    left: 233px;
+    width: 75px;
+    height: 39px;
+    background: transparent url('../img/cont1.png') -74px -2501px no-repeat;
+    background-size: 450px;
+}
+/* 祝福血条 */
+.img3-41
+{
+    bottom: 106px;
+    left: 55px;
+    width: 46px;
+    height: 26px;
+    background: transparent url('../img/cont5.png') -132px 0 no-repeat;
+    background-size: 200px;
+}
+.img3-42
+{
+    bottom: 106px;
+    left: 94px;
+    width: 46px;
+    height: 26px;
+    background: transparent url('../img/cont5.png') -132px 0 no-repeat;
+    background-size: 200px;
+}
+.img3-43
+{
+    bottom: 106px;
+    left: 133px;
+    width: 46px;
+    height: 26px;
+    background: transparent url('../img/cont5.png') -132px 0 no-repeat;
+    background-size: 200px;
+}
+.img3-44
+{
+    bottom: 106px;
+    left: 171px;
+    width: 46px;
+    height: 26px;
+    background: transparent url('../img/cont5.png') -132px 0 no-repeat;
+    background-size: 200px;
+}
+.img3-45
+{
+    bottom: 106px;
+    left: 219px;
+    width: 25px;
+    height: 26px;
+    background: transparent url('../img/cont5.png') 0 0 no-repeat;
+    background-size: 200px;
+}
+/* 黑暗血条 */
+.img3-47
+{
+    bottom: 105px;
+    left: 461px;
+    width: 46px;
+    height: 26px;
+    background: transparent url('../img/cont5.png') -82px 0 no-repeat;
+    background-size: 190px;
+}
+.img3-48
+{
+    bottom: 105px;
+    left: 415px;
+    width: 49px;
+    height: 26px;
+    background: transparent url('../img/cont5.png') -25px 0 no-repeat;
+    background-size: 190px;
+}
+.img3-49
+{
+    bottom: 105px;
+    left: 372px;
+    width: 49px;
+    height: 26px;
+    background: transparent url('../img/cont5.png') -25px 0 no-repeat;
+    background-size: 190px;
+}
+.img3-50
+{
+    bottom: 105px;
+    left: 329px;
+    width: 49px;
+    height: 26px;
+    background: transparent url('../img/cont5.png') -25px 0 no-repeat;
+    background-size: 190px;
+}
+.img3-51
+{
+    bottom: 104px;
+    left: 301px;
+    width: 46px;
+    height: 26px;
+    background: transparent url('../img/cont5.png') 0 -24px no-repeat;
+    background-size: 185px;
+}
+/* gif页 */
+.img4-1
+{
+    bottom: 318px;
+    left: 96px;
+    width: 352px;
+    height: 38px;
+    background: transparent url('../img/cont4.png') 1px 1px no-repeat;
+    background-size: 450px;
+}
+/* 形成月饼页 */
+.img5-1
+{
+    bottom: 202px;
+    left: 50px;
+    width: 511px;
+    height: 487px;
+    background: transparent url('../img/cont1.png') -48px -3476px no-repeat;
+    background-size: 540px;
+}
+/* 月饼 */
+.img5-2
+{
+    bottom: 342px;
+    left: 130px;
+    width: 261px;
+    height: 268px;
+    background: transparent url('../img/cont2.png') -92px 6px no-repeat;
+    background-size: 450px;
+}
+.img5-3
+{
+    bottom: 342px;
+    left: 130px;
+    width: 261px;
+    height: 268px;
+    background: transparent url('../img/cont2.png') -92px -511px no-repeat;
+    background-size: 450px;
+}
+.img5-4
+{
+    bottom: 342px;
+    left: 130px;
+    width: 261px;
+    height: 268px;
+    background: transparent url('../img/cont2.png') -92px -257px no-repeat;
+    background-size: 450px;
+}
+.img5-5
+{
+    bottom: 342px;
+    left: 130px;
+    width: 261px;
+    height: 268px;
+    background: transparent url('../img/cont2.png') -92px -780px no-repeat;
+    background-size: 450px;
+}
+.img5-6
+{
+    bottom: 342px;
+    left: 130px;
+    width: 261px;
+    height: 268px;
+    background: transparent url('../img/cont2.png') -92px -1042px no-repeat;
+    background-size: 450px;
+}
+/*吐血值  */
+.img5-7
+{
+    bottom: 216px;
+    left: 191px;
+    width: 141px;
+    height: 48px;
+    background: transparent url('../img/cont2.png') -1px -1312px no-repeat;
+    background-size: 450px;
+}
+.img5-8
+{
+    bottom: 216px;
+    left: 191px;
+    width: 141px;
+    height: 48px;
+    background: transparent url('../img/cont2.png') -139px -1312px no-repeat;
+    background-size: 450px;
+}
+.img5-9
+{
+    bottom: 216px;
+    left: 191px;
+    width: 141px;
+    height: 48px;
+    background: transparent url('../img/cont2.png') -279px -1312px no-repeat;
+    background-size: 450px;
+}
+.img5-10
+{
+    bottom: 216px;
+    left: 191px;
+    width: 141px;
+    height: 48px;
+    background: transparent url('../img/cont2.png') -1px -1366px no-repeat;
+    background-size: 450px;
+}
+.img5-11
+{
+    bottom: 216px;
+    left: 191px;
+    width: 141px;
+    height: 48px;
+    background: transparent url('../img/cont2.png') -139px -1366px  no-repeat;
+    background-size: 450px;
+}
+/* 祝福值 */
+.img5-12
+{
+    bottom: 216px;
+    left: 191px;
+    width: 141px;
+    height: 48px;
+    background: transparent url('../img/cont2.png') -276px -1366px no-repeat;
+    background-size: 450px;
+}
+.img5-13
+{
+    bottom: 267px;
+    left: 191px;
+    width: 141px;
+    height: 48px;
+    background: transparent url('../img/cont2.png') -1px -1421px no-repeat;
+    background-size: 450px;
+}
+.img5-14
+{
+    bottom: 267px;
+    left: 191px;
+    width: 141px;
+    height: 48px;
+    background: transparent url('../img/cont2.png') -139px -1421px no-repeat;
+    background-size: 450px;
+}
+.img5-15
+{
+    bottom: 267px;
+    left: 191px;
+    width: 141px;
+    height: 48px;
+    background: transparent url('../img/cont2.png') -279px -1421px no-repeat;
+    background-size: 450px;
+}
+.img5-16
+{
+    bottom: 267px;
+    left: 191px;
+    width: 141px;
+    height: 48px;
+    background: transparent url('../img/cont2.png') -1px -1478px no-repeat;
+    background-size: 450px;
+}
+/* 黑暗指数 */
+.img5-17
+{
+    bottom: 161px;
+    left: 107px;
+    width: 321px;
+    height: 48px;
+    background: transparent url('../img/cont2.png') -1px -1532px no-repeat;
+    background-size: 450px;
+}
+/* star */
+.star
+{
+    bottom: 173px;
+    width: 28px;
+    height: 26px;
+}
+.star-black
+{
+    background: transparent url('../img/cont4.png') -29px -39px no-repeat;
+    background-size: 450px;
+}
+.star1
+{
+    left: 245px;
+}
+.star2
+{
+    left: 277px;
+}
+.star3
+{
+    left: 308px;
+}
+.star4
+{
+    left: 343px;
+}
+.star5
+{
+    left: 374px;
+}
+.star-white
+{
+    background: transparent url('../img/cont4.png') 1px -39px no-repeat;
+    background-size: 450px;
+}
+/* s 白森按钮 */
+.img5-27
+{
+    bottom: 5px;
+    left: 32px;
+    width: 228px;
+    height: 122px;
+    background: transparent url('../img/cont2.png') -1px -1588px no-repeat;
+    background-size: 450px;
+}
+.img5-28
+{
+    bottom: 5px;
+    left: 302px;
+    width: 228px;
+    height: 122px;
+    background: transparent url('../img/cont2.png') -233px -1588px no-repeat;
+    background-size: 450px;
+}
+.img6-1
+{
+    z-index: 1;
+    bottom: 639px;
+    left: 40px;
+    width: 57px;
+    height: 58px;
+    background: transparent url('../img/cont2.png') 0 -2207px no-repeat;
+    background-size: 450px;
+}
+/* s 白森 */
+.img6-2
+{
+    z-index: -1;
+    bottom: 157px;
+    left: 123px;
+    width: 282px;
+    height: 485px;
+    background: transparent url('../img/cont2.png') -69px -1724px no-repeat;
+    background-size: 450px;
+}
+.img6-9
+{
+    z-index: -1;
+    bottom: 158px;
+    left: 44px;
+    width: 378px;
+    height: 532px;
+    background: transparent url('../img/cont3.png') 0 -72px no-repeat;
+    background-size: 450px;
+}
+/* 捎句话 送首歌 */
+.img6-3
+{
+    bottom: 273px;
+    left: 45px;
+    width: 449px;
+    height: 82px;
+    background: transparent url('../img/cont2.png') 0 -2263px no-repeat;
+    background-size: 450px;
+}
+.img6-5
+{
+    bottom: 201px;
+    left: 45px;
+    width: 449px;
+    height: 84px;
+    background: transparent url('../img/cont2.png') 0 -2434px no-repeat;
+    background-size: 450px;
+}
+.img6-7
+{
+    bottom: 133px;
+    left: 45px;
+    width: 449px;
+    height: 84px;
+    background: transparent url('../img/cont2.png') 0 -2605px no-repeat;
+    background-size: 450px;
+}
+.img6-10
+{
+    bottom: 272px;
+    left: 45px;
+    width: 449px;
+    height: 84px;
+    background: transparent url('../img/cont3.png') 0 -611px no-repeat;
+    background-size: 450px;
+}
+.img6-12
+{
+    bottom: 193px;
+    left: 45px;
+    width: 449px;
+    height: 84px;
+    background: transparent url('../img/cont3.png') 0 -783px no-repeat;
+    background-size: 450px;
+}
+/* 分享页 */
+.img7-1
+{
+    z-index: 2;
+    bottom: 291px;
+    left: 45px;
+    width: 449px;
+    height: 267px;
+    background: transparent url('../img/cont3.png') 0 -961px no-repeat;
+    background-size: 450px;
+}
+.img7-2
+{
+    bottom: 186px;
+    left: 45px;
+    width: 449px;
+    height: 459px;
+    background: transparent url('../img/cont3.png') 0 -1240px no-repeat;
+    background-size: 450px;
+}
+.img7-3
+{
+    bottom: 80px;
+    left: 73px;
+    width: 159px;
+    height: 84px;
+    background: transparent url('../img/cont3.png') -172px 0 no-repeat;
+    background-size: 450px;
+}
+.img7-4
+{
+    bottom: 84px;
+    left: 294px;
+    width: 159px;
+    height: 84px;
+    background: transparent url('../img/cont3.png') 0 0 no-repeat;
+    background-size: 450px;
+}
